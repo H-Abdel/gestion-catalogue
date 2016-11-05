@@ -31,66 +31,24 @@ Le SGBD utilisé pour ce projet est mySQL. Si vous voulez essayer l'application 
 Voud devez au préalable créer une base de données ayant pour nom 'cat_prod' et y rajouter une table
 nommée produits. 
 
-### Le schéma relationnel
+### Commande SQL
 
-+-------------+-------------+------+-----+---------+-------+
-| Field       | Type        | Null | Key | Default | Extra |
-+-------------+-------------+------+-----+---------+-------+
-| ref_prod    | varchar(25) | NO   | PRI | NULL    |       |
-| designation | varchar(70) | YES  |     | NULL    |       |
-| prix        | double      | YES  |     | NULL    |       |
-| quantite    | int(11)     | YES  |     | NULL    |       |
-+-------------+-------------+------+-----+---------+-------+
+CREATE DATABASE cat_prod
+
+USE cat_prod
+
+CREATE TABLE produits ( 
+	ref_prod    varchar(25) not null, 
+	designation varchar(70) default null, 
+	prix        double 	default null, 
+	quantite    int(11) 	default null, 
+	primary key (ref_prod)
+);
 
 Vous pouvez nommer la base de données et la table autrement mais pensez à aporter les modifications nécessaires au ficher hibernate.cfg.xml
 Pensez également à modifiez le nom d'utilisateur et le mot de passe.
 
-## arborescence du projet
 
-├── src
-│   ├── hibernate.cfg.xml
-│   ├── metier
-│   │   ├── CatalogueMetierImpl.java
-│   │   ├── ICatalogueMetier.java
-│   │   └── Produit.java
-│   └── web
-│       ├── ConroleurServlet.java
-│       └── ProduitModel.java
-└── WebContent
-    ├── css
-    │   └── bootstrap.min.css
-    ├── META-INF
-    │   └── MANIFEST.MF
-    └── WEB-INF
-        ├── classes
-        │   ├── hibernate.cfg.xml
-        │   ├── metier
-        │   │   ├── CatalogueMetierImpl.class
-        │   │   ├── ICatalogueMetier.class
-        │   │   └── Produit.class
-        │   └── web
-        │       ├── ConroleurServlet.class
-        │       └── ProduitModel.class
-        ├── lib
-        │   ├── antlr-2.7.7.jar
-        │   ├── cdi-api-1.1.jar
-        │   ├── classmate-1.3.0.jar
-        │   ├── dom4j-1.6.1.jar
-        │   ├── el-api-2.2.jar
-        │   ├── geronimo-jta_1.1_spec-1.1.1.jar
-        │   ├── hibernate-commons-annotations-5.0.1.Final.jar
-        │   ├── hibernate-core-5.2.4.Final.jar
-        │   ├── hibernate-jpa-2.1-api-1.0.0.Final.jar
-        │   ├── hibernate-jpamodelgen-5.2.4.Final.jar
-        │   ├── jandex-2.0.0.Final.jar
-        │   ├── javassist-3.20.0-GA.jar
-        │   ├── javax.inject-1.jar
-        │   ├── jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar
-        │   ├── jboss-logging-3.3.0.Final.jar
-        │   ├── jsr250-api-1.0.jar
-        │   ├── jstl-1.2.jar
-        │   └── mysql-connector-java-5.1.40-bin.jar
-        └── vue_produits.jsp
 
 
 
