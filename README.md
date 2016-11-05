@@ -46,7 +46,7 @@ CREATE TABLE produits (
 );
 ```
 
-Vous pouvez nommer la base de données et la table autrement mais pensez à aporter les modifications nécessaires au ficher hibernate.cfg.xml
+Vous pouvez nommer la base de données et la table autrement mais pensez à aporter les modifications nécessaires au fichier hibernate.cfg.xml.
 Pensez également à modifiez le nom d'utilisateur et le mot de passe.
 
 
