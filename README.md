@@ -32,7 +32,7 @@ Voud devez au préalable créer une base de données ayant pour nom 'cat_prod' e
 nommée produits. 
 
 ### Commande SQL
-
+```
 CREATE DATABASE cat_prod
 
 USE cat_prod
@@ -44,6 +44,7 @@ CREATE TABLE produits (
 	quantite    int(11) 	default null, 
 	primary key (ref_prod)
 );
+```
 
 Vous pouvez nommer la base de données et la table autrement mais pensez à aporter les modifications nécessaires au ficher hibernate.cfg.xml
 Pensez également à modifiez le nom d'utilisateur et le mot de passe.
